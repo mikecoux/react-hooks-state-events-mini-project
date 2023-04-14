@@ -23,7 +23,11 @@ function NewTaskForm( {categoryData, onTaskFormSubmit} ) {
 
   function handleSubmit(e) {
     e.preventDefault();
-    onTaskFormSubmit(formData)
+    onTaskFormSubmit(formData);
+    setFormData({
+      text: '',
+      category: 'Code'
+    })
   }
 
   return (
